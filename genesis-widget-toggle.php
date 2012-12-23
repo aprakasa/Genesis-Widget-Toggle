@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Genesis Widget Toggle
-Plugin URI: https://github.com/aryaprakasa/genesis-widget-toggle
+Plugin URI: http://wordpress.org/extend/plugins/genesis-widget-toggle/
 Description: Genesis widget toggle add additional widget area with toggle.
 Author: Arya Prakasa
 Author URI: http://ayothemes.com/tf

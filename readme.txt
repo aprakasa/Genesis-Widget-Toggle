@@ -1,19 +1,22 @@
 === Plugin Name ===
 Contributors: aprakasa
-Donate link: -
-Tags: widget, responsive, genesis, genesiswp, studiopress
-Requires at least: 3.2
-Tested up to: 3.5 beta 1
-Stable tag: 0.1
+Donate link: http://ayothemes.com/tf
+Tags: widget, toggle, responsive, genesis, genesiswp, studiopress
+Requires at least: 3.4
+Tested up to: 3.5
+Stable tag: 0.2
 License: GNU General Public License v2.0 (or later)
 License URI: http://www.opensource.org/licenses/gpl-license.php
 
-This plugin add additional widget area that can be slide up and down.
+This plugin add additional widget area that can be slide up and down at the top of your site.
 
 == Description ==
 
-This plugin add additional widget area that can be slide up and down.
+This plugin add additional widget area that can be slide up and down at the top of your site.
 Very useful when your site have lot of information to show but doesnt have enough space.
+
+To make it sure how the plugin work, please take a look at [screenshot](http://wordpress.org/extend/plugins/genesis-widget-toggle/screenshots/),
+or if you want to see the live version, just take a look at my [commercial child theme](http://ayothemes.com/go/ayoshop).
 
 Note: This plugin only supports Genesis child themes.
 
@@ -26,13 +29,28 @@ Note: This plugin only supports Genesis child themes.
 
 == Frequently Asked Questions ==
 
-None
+= What does it do? =
+Add additional widget area that will show at the top of your site.
+
+= The plugin won't activate? =
+
+You must have Genesis or a Genesis child theme installed and activated on your site.
+
+= Where I can find support? =
+Just visit [Genesis Widget Toggle Support Page](http://wordpress.org/support/plugin/genesis-widget-toggle "Genesis Widget Toggle Support Page")
 
 == Screenshots ==
 1. Widget toggle display
 2. Additional widget area for widget toggle.
+3. Genesis Widget Toggle Settings.
 
 == Changelog ==
+
+= 0.2 =
+* Cleanup PHP code
+* Cleanup CSS code
+* Add admin setting by using Genesis Setting API
+* Add ability to change widget toggle background and color
 
 = 0.1 =
 * Initial Release
