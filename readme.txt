@@ -15,8 +15,7 @@ This plugin add additional widget area that can be slide up and down at the top 
 This plugin add additional widget area that can be slide up and down at the top of your site.
 Very useful when your site have lot of information to show but doesnt have enough space.
 
-To make it sure how the plugin work, please take a look at [screenshot](http://wordpress.org/extend/plugins/genesis-widget-toggle/screenshots/),
-or if you want to see the live version, just take a look at my [commercial child theme](http://ayothemes.com/go/ayoshop).
+To make it sure how the plugin work, please take a look at [screenshot](http://wordpress.org/extend/plugins/genesis-widget-toggle/screenshots/).
 
 Note: This plugin only supports Genesis child themes.
 
