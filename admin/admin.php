@@ -106,9 +106,9 @@ class GWT_Admin_settings extends Genesis_Admin_Boxes {
 			wp_register_script( 'iris', GWT_PLUGIN_URL . '/assets/js/iris.min.js', array( 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ), false, 1 );
 			wp_register_script( 'wp-color-picker', GWT_PLUGIN_URL . '/assets/js/color-picker.min.js', array( 'jquery', 'iris' ) );
 			$colorpicker_l10n = array(
-				'clear' 		=> __( 'Clear' ),
-				'defaultString' => __( 'Default' ),
-				'pick' 			=> __( 'Select Color' )
+				'clear' 		=> __( 'Clear', GWT_DOMAIN ),
+				'defaultString' => __( 'Default', GWT_DOMAIN ),
+				'pick' 			=> __( 'Select Color', GWT_DOMAIN )
 			);
 			wp_localize_script( 'wp-color-picker', 'wpColorPickerL10n', $colorpicker_l10n );
 		}
@@ -125,7 +125,7 @@ class GWT_Admin_settings extends Genesis_Admin_Boxes {
 	 */
 	function metaboxes() {
  		
- 		add_meta_box( 'general-settings', __( 'General Settings', 'gwt'), array( $this, 'general_settings' ), $this->pagehook, 'main', 'high');
+ 		add_meta_box( 'general-settings', __( 'General Settings', GWT_DOMAIN), array( $this, 'general_settings' ), $this->pagehook, 'main', 'high');
  
 	}
 
@@ -138,62 +138,60 @@ class GWT_Admin_settings extends Genesis_Admin_Boxes {
 		?>
 
 		<p>
-			<label style="width: 180px; margin: 0 40px 0 0; display: inline-block;" for="<?php echo $this->get_field_name( 'max_width' ); ?>"><?php _e( 'Max-width', 'gwt' ); ?></label>
+			<label style="width: 180px; margin: 0 40px 0 0; display: inline-block;" for="<?php echo $this->get_field_name( 'max_width' ); ?>"><?php _e( 'Max-width', GWT_DOMAIN ); ?></label>
 			<input type="number" name="<?php echo $this->get_field_name( 'max_width' );?>" id="<?php echo $this->get_field_id( 'max_width' );?>" min="640" max="1920" value="<?php echo (int)$this->get_field_value( 'max_width' ); ?>" /> px
 		</p>
 
 		<p>
-			<label style="width: 180px; margin: 0 40px 0 0; display: inline-block;" for="<?php echo $this->get_field_id( 'position' ); ?>"><?php _e( 'Position', 'gwt' ); ?></label>
+			<label style="width: 180px; margin: 0 40px 0 0; display: inline-block;" for="<?php echo $this->get_field_id( 'position' ); ?>"><?php _e( 'Position', GWT_DOMAIN ); ?></label>
 			<select name="<?php echo $this->get_field_name( 'position' ); ?>" id="<?php echo $this->get_field_id( 'position' ); ?>">
-				<option value="absolute"<?php selected( $this->get_field_value( 'position' ), 'absolute' ); ?>><?php _e( 'Absolute', 'gwt' ); ?></option>
-				<option value="fixed"<?php selected( $this->get_field_value( 'position' ), 'fixed' ); ?>><?php _e( 'Fixed', 'gwt' ); ?></option>
+				<option value="absolute"<?php selected( $this->get_field_value( 'position' ), 'absolute' ); ?>><?php _e( 'Absolute', GWT_DOMAIN ); ?></option>
+				<option value="fixed"<?php selected( $this->get_field_value( 'position' ), 'fixed' ); ?>><?php _e( 'Fixed', GWT_DOMAIN ); ?></option>
 			</select>
 		</p>
 
 		<p>
-			<label style="width: 180px; margin: 0 40px 0 0; display: inline-block;" for="<?php echo $this->get_field_id( 'load_css' ); ?>"><?php _e( 'Load basic css?', 'gwt' ); ?></label>
+			<label style="width: 180px; margin: 0 40px 0 0; display: inline-block;" for="<?php echo $this->get_field_id( 'load_css' ); ?>"><?php _e( 'Load basic css?', GWT_DOMAIN ); ?></label>
 			<input type = "checkbox" name="<?php echo $this->get_field_name( 'load_css' ); ?>" id="<?php echo $this->get_field_id( 'load_css' ); ?>" value="1"<?php checked( $this->get_field_value( 'load_css' ) ); ?> />
 		</p>
 
 		<hr class="div">
 
-		<h4><?php _e( 'Color settings', 'gwt' );?></h4>
+		<h4><?php _e( 'Color settings', GWT_DOMAIN );?></h4>
 
 		<p>
-			<label style="width: 180px; margin: 0 40px 20px 0; display: inline-block;" for="<?php echo $this->get_field_name( 'gwt_background' ); ?>"><?php _e( 'Background color', 'gwt' ); ?></label>
+			<label style="width: 180px; margin: 0 40px 20px 0; display: inline-block;" for="<?php echo $this->get_field_name( 'gwt_background' ); ?>"><?php _e( 'Background color', GWT_DOMAIN ); ?></label>
 			<input data-default-color="#333333" name="<?php echo $this->get_field_name( 'gwt_background' );?>" id="<?php echo $this->get_field_id( 'gwt_background' );?>" class="gwt-color"  type="text" value="<?php echo $this->get_field_value( 'gwt_background' ); ?>" />
 		</p>
 
 		<p>
-			<label style="width: 180px; margin: 0 40px 20px 0; display: inline-block;" for="<?php echo $this->get_field_name( 'gwt_border' ); ?>"><?php _e( 'Border color', 'gwt' ); ?></label>
+			<label style="width: 180px; margin: 0 40px 20px 0; display: inline-block;" for="<?php echo $this->get_field_name( 'gwt_border' ); ?>"><?php _e( 'Border color', GWT_DOMAIN ); ?></label>
 			<input data-default-color="#222222" name="<?php echo $this->get_field_name( 'gwt_border' );?>" id="<?php echo $this->get_field_id( 'gwt_border' );?>" class="gwt-color"  type="text" value="<?php echo $this->get_field_value( 'gwt_border' ); ?>" />
 		</p>
 
 		<p>
-			<label style="width: 180px; margin: 0 40px 20px 0; display: inline-block;" for="<?php echo $this->get_field_name( 'text_color' ); ?>"><?php _e( 'Text color', 'gwt' ); ?></label>
+			<label style="width: 180px; margin: 0 40px 20px 0; display: inline-block;" for="<?php echo $this->get_field_name( 'text_color' ); ?>"><?php _e( 'Text color', GWT_DOMAIN ); ?></label>
 			<input data-default-color="#aaaaaa" name="<?php echo $this->get_field_name( 'text_color' );?>" id="<?php echo $this->get_field_id( 'text_color' );?>" class="gwt-color"  type="text" value="<?php echo $this->get_field_value( 'text_color' ); ?>" />
 		</p>
 
 		<p>
-			<label style="width: 180px; margin: 0 40px 20px 0; display: inline-block;" for="<?php echo $this->get_field_name( 'link_color' ); ?>"><?php _e( 'Link color', 'gwt' ); ?></label>
+			<label style="width: 180px; margin: 0 40px 20px 0; display: inline-block;" for="<?php echo $this->get_field_name( 'link_color' ); ?>"><?php _e( 'Link color', GWT_DOMAIN ); ?></label>
 			<input data-default-color="#FFE000" name="<?php echo $this->get_field_name( 'link_color' );?>" id="<?php echo $this->get_field_id( 'link_color' );?>" class="gwt-color"  type="text" value="<?php echo $this->get_field_value( 'link_color' ); ?>" />
 		</p>
 
 		<p>
-			<label style="width: 180px; margin: 0 40px 20px 0; display: inline-block;" for="<?php echo $this->get_field_name( 'hover_color' ); ?>"><?php _e( 'Hover color', 'gwt' ); ?></label>
+			<label style="width: 180px; margin: 0 40px 20px 0; display: inline-block;" for="<?php echo $this->get_field_name( 'hover_color' ); ?>"><?php _e( 'Hover color', GWT_DOMAIN ); ?></label>
 			<input data-default-color="#ffffff" name="<?php echo $this->get_field_name( 'hover_color' );?>" id="<?php echo $this->get_field_id( 'hover_color' );?>?" class="gwt-color"  type="text" value="<?php echo $this->get_field_value( 'hover_color' ); ?>" />
 		</p>
 
 
 		<hr class="div">
 
-		<p><strong><?php _e( 'Support', 'gwt' );?> : </strong><?php echo sprintf( __( 'Feedback, questions or suggestion just visit %sWordPress plugin support%s page.', 'gwt' ) , '<a target="_blank" href="http://wordpress.org/support/plugin/genesis-widget-toggle">', '</a>' )?></p>
-
-		<p><strong><?php _e( 'Donation', 'gwt' );?> : </strong><?php echo sprintf( __( 'If you like my work, just purchase my %scommercial theme%s. Thanks for your support.', 'gwt' ) , '<a target="_blank" href="http://ayothemes.com/go/ayoshop">', '</a>' )?></p>
+		<p><strong><?php _e( 'Support', GWT_DOMAIN );?> : </strong><?php echo sprintf( __( 'Feedback, questions or suggestion just visit %sWordPress plugin support%s page.', GWT_DOMAIN ) , '<a target="_blank" href="http://wordpress.org/support/plugin/genesis-widget-toggle">', '</a>' )?></p>
 
 		<script>
 			jQuery(document).ready(function($) {
-				$('.gwt-color').wpColorPicker();
+				$( '.gwt-color' ).wpColorPicker();
 			});
 		</script>
 

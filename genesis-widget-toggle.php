@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: Genesis Widget Toggle
-Plugin URI: http://wordpress.org/extend/plugins/genesis-widget-toggle/
+Plugin URI: https://github.com/aryaprakasa/genesis-widget-toggle
 Description: Genesis widget toggle add additional widget area with toggle.
 Author: Arya Prakasa
-Author URI: http://ayothemes.com/tf
+Author URI: http://prakasa.me/
 
-Version: 0.2
+Version: 0.2.1
 
 License: GNU General Public License v2.0 (or later)
 License URI: http://www.opensource.org/licenses/gpl-license.php
@@ -27,13 +27,12 @@ class Genesis_Widget_Toggle {
 	function __construct() {
 		/** Register activation hook */
 		register_activation_hook( __FILE__, array( $this, 'widgettoggle_activation' ) );
-
 		/** Define plugin constant */
 		define( 'GWT_VERSION', '0.1' );
 		define( 'GWT_SETTINGS_FIELD', 'gwt-settings' );
+		define( 'GWT_DOMAIN', 'gwt' );
 		define( 'GWT_PLUGIN_DIR', dirname( __FILE__ ) );
-		define( 'GWT_PLUGIN_URL', plugin_dir_url(__FILE__) );
-
+		define( 'GWT_PLUGIN_URL', trailingslashit( plugin_dir_url(__FILE__) ) );
 		/** Allow shortcode at widget text */
 		add_filter( 'widget_text', 'do_shortcode' );
 		/** Register widget area */
@@ -44,7 +43,7 @@ class Genesis_Widget_Toggle {
 		add_action( 'genesis_admin_menu', array( $this, 'gwt_admin_settings' ), 15 );
 		/** Hook the widget area at wp_footer() */
 		add_action( 'wp_footer', array( $this, 'gwt_add_sidebar_area' ), 5);
-		/** Hook the gwt_dynamic_style area at wp_head() */
+		/** Hook the gwt_dynamic_style() area at wp_head() */
 		add_action( 'wp_head', array( $this, 'gwt_dynamic_style' ), 999 );
 		/** Load plugin script and styles */
 		add_action( 'wp_enqueue_scripts', array( $this, 'gwt_script_and_style' ), 999);
@@ -166,10 +165,10 @@ class Genesis_Widget_Toggle {
 	function gwt_script_and_style(){
 		if ( !is_admin() && is_active_sidebar( 'gwt-widget-left' ) || is_active_sidebar( 'gwt-widget-middle' ) || is_active_sidebar( 'gwt-widget-right' ) ){
 			wp_enqueue_script( 'jquery' );
-			wp_enqueue_script( 'gwt-scipts', GWT_PLUGIN_URL .'/assets/js/gwt-script.js', 'jquery', GWT_VERSION, true );
+			wp_enqueue_script( 'gwt-scipts', trailingslashit( GWT_PLUGIN_URL ) .'assets/js/gwt-script.js', array( 'jquery' ), GWT_VERSION, true );
 			
 			if ( genesis_get_option( 'load_css', GWT_SETTINGS_FIELD ) == 1 ) {
-				wp_enqueue_style( 'gwt-style', GWT_PLUGIN_URL .'/assets/css/gwt-style.css', array(), GWT_VERSION, 'all' );
+				wp_enqueue_style( 'gwt-style', trailingslashit( GWT_PLUGIN_URL ) .'assets/css/gwt-style.css', array(), GWT_VERSION, 'all' );
 			}
 
 		}
@@ -241,6 +240,7 @@ class Genesis_Widget_Toggle {
 	
 }
 
-endif;
+global $_genesis_widget_toggle;
+$_genesis_widget_toggle = new Genesis_Widget_Toggle;
 
-$Genesis_Widget_Toggle = new Genesis_Widget_Toggle;
+endif;

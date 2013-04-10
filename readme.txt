@@ -4,7 +4,7 @@ Donate link: http://ayothemes.com/tf
 Tags: widget, toggle, responsive, genesis, genesiswp, studiopress
 Requires at least: 3.4
 Tested up to: 3.5
-Stable tag: 0.2
+Stable tag: 0.2.1
 License: GNU General Public License v2.0 (or later)
 License URI: http://www.opensource.org/licenses/gpl-license.php
 
@@ -44,6 +44,9 @@ Just visit [Genesis Widget Toggle Support Page](http://wordpress.org/support/plu
 3. Genesis Widget Toggle Settings.
 
 == Changelog ==
+
+= 0.2.1 =
+* Cleanup some code
 
 = 0.2 =
 * Cleanup PHP code
