@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: aprakasa
-Donate link: http://ayothemes.com/tf
+Donate link: http://prakasa.me/go/donation
 Tags: widget, toggle, responsive, genesis, genesiswp, studiopress
 Requires at least: 3.4
 Tested up to: 3.5
@@ -21,8 +21,8 @@ Note: This plugin only supports Genesis child themes.
 
 == Installation ==
 
-1. Upload the entire `Genesis Widget Toggle` folder to the `/wp-content/plugins/` directory
-1. DO NOT change the name of the Genesis Widget Toggle` folder
+1. Upload the entire 'Genesis Widget Toggle' folder to the '/wp-content/plugins/' directory
+1. DO NOT change the name of the 'Genesis Widget Toggle' folder
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Drag and drop available widget into Widget Toggle Left, Middle and Right
 
@@ -44,6 +44,15 @@ Just visit [Genesis Widget Toggle Support Page](http://wordpress.org/support/plu
 3. Genesis Widget Toggle Settings.
 
 == Changelog ==
+= 0.3 =
+* Add and rename new functions and constants
+* Add options between using "plus" sign or plain text
+* Add .po and .mo for translation
+* Cleanup CSS from unnecessary property
+* Fix CSS when user login and if Toolbar enable
+* Switch from "div" to "aside" if Genesis HTML5 enabled
+* Replace "plus" and "minus" images with font
+* Replace translation constant into string
 
 = 0.2.1 =
 * Cleanup some code

@@ -1,0 +1,133 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Genesis Widget Toggle\n"
+"POT-Creation-Date: 2013-09-11 11:43+0700\n"
+"PO-Revision-Date: 2013-09-11 11:43+0700\n"
+"Last-Translator: \n"
+"Language-Team: Arya Prakasa <arya@prakasa.me>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../genesis-widget-toggle.php:114
+msgid "Widget Toggle Left"
+msgstr ""
+
+#: ../genesis-widget-toggle.php:115
+msgid "Widget Toggle left area."
+msgstr ""
+
+#: ../genesis-widget-toggle.php:118
+msgid "Widget toggle Middle"
+msgstr ""
+
+#: ../genesis-widget-toggle.php:119
+msgid "Widget toggle middle area."
+msgstr ""
+
+#: ../genesis-widget-toggle.php:122
+msgid "Widget Toggle Right"
+msgstr ""
+
+#: ../genesis-widget-toggle.php:123
+msgid "Widget toggle right area."
+msgstr ""
+
+#: ../genesis-widget-toggle.php:266
+#, php-format
+msgid ""
+"Sorry, you cannot run Genesis Widget Toggle without WordPress %s and <a href="
+"\"%s\">Genesis %s</a>, or greater."
+msgstr ""
+
+#: ../admin/admin.php:25
+msgid "Genesis Widget Toggle Settings"
+msgstr ""
+
+#: ../admin/admin.php:26
+msgid "Widget Toggle"
+msgstr ""
+
+#: ../admin/admin.php:88
+msgid "Clear"
+msgstr ""
+
+#: ../admin/admin.php:89
+msgid "Default"
+msgstr ""
+
+#: ../admin/admin.php:90
+msgid "Select Color"
+msgstr ""
+
+#: ../admin/admin.php:107
+msgid "General Settings"
+msgstr ""
+
+#: ../admin/admin.php:119
+msgid "Max-width"
+msgstr ""
+
+#: ../admin/admin.php:124
+msgid "Position"
+msgstr ""
+
+#: ../admin/admin.php:126
+msgid "Absolute"
+msgstr ""
+
+#: ../admin/admin.php:127
+msgid "Fixed"
+msgstr ""
+
+#: ../admin/admin.php:132
+msgid "Load basic css?"
+msgstr ""
+
+#: ../admin/admin.php:137
+msgid "Toggle Button Text"
+msgstr ""
+
+#: ../admin/admin.php:139
+#, php-format
+msgid "This field will replace the %s icon"
+msgstr ""
+
+#: ../admin/admin.php:143
+msgid "Color settings"
+msgstr ""
+
+#: ../admin/admin.php:146
+msgid "Background color"
+msgstr ""
+
+#: ../admin/admin.php:151
+msgid "Border color"
+msgstr ""
+
+#: ../admin/admin.php:156
+msgid "Text color"
+msgstr ""
+
+#: ../admin/admin.php:161
+msgid "Link color"
+msgstr ""
+
+#: ../admin/admin.php:166
+msgid "Hover color"
+msgstr ""
+
+#: ../admin/admin.php:172
+msgid "Support"
+msgstr ""
+
+#: ../admin/admin.php:172
+#, php-format
+msgid ""
+"Feedback, questions or suggestion just visit %sWordPress plugin support%s "
+"page."
+msgstr ""
